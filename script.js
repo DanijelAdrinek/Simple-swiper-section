@@ -1,7 +1,8 @@
 const swiper = new Swiper('.swiper', {
     slidesPerView: "auto",
     spaceBetween: 8,
-    speed: 400,
+    speed: 500,
+    initialSlide: 0,
     centeredSlides: true,
     centeredSlidesBounds: true,
     // Navigation arrows
@@ -10,3 +11,5 @@ const swiper = new Swiper('.swiper', {
         prevEl: '.swiper-button-prev',
     }
 });
+
+swiper.swipeTo(0, 1, false);
