@@ -11,5 +11,3 @@ const swiper = new Swiper('.swiper', {
         prevEl: '.swiper-button-prev',
     }
 });
-
-swiper.swipeTo(0, 1, false);
