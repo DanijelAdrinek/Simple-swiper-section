@@ -1,6 +1,9 @@
 /* Variables */
 :root {
     --primary-color: #F3EDE5;
+    --mobile-offset: 16px;
+    --desktop-offset: 64px;
+    --swipe-button-position-top: 48%;
 }
 
 /* Mobile */
@@ -67,4 +70,40 @@ body {
 .swiper-button-next > img {
     height: 50%;
     width: 50%;
+}
+
+/* Desktop */
+
+@media screen and (min-width: 800px) {
+    
+    .swiper {
+        height: 585px;
+    }
+
+    .swiper-slide {
+        width: 100%;
+        max-width: 468px;
+    }
+
+    .swiper-slide:first-child {
+        margin-left: var(--desktop-offset);
+    }
+    
+    .swiper-slide:last-child {
+        margin-right: var(--desktop-offset);
+    }
+
+    .swiper-button-disabled {
+        opacity: 0.32 !important;
+    }
+
+    .swiper-button-prev {
+        left: 64px;
+        top: var(--swipe-button-position-top);
+    }
+
+    .swiper-button-next {
+        right: 34px;
+        top: var(--swipe-button-position-top);
+    }
 }
